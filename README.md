@@ -1,5 +1,4 @@
-Address Book API
-================
+# Address Book API
 
 Just a silly little api to mimick an address book.
 
@@ -17,10 +16,10 @@ you want in the header, for example:
 
 ```js
 ajax({
-  url: 'http://addressbook-api.herokuapp.com',
+  url: "https://address-book-lunchclub.herokuapp.com/",
   headers: {
-    'Authorization': 'ae34g1ce'
-  }
+    Authorization: "StayHungry",
+  },
 });
 ```
 
@@ -31,7 +30,7 @@ Returns all contacts, there are a few by default
 Example request:
 
 ```js
-$.getJSON('http://addressbook-api.herokuapp.com/contacts')
+$.getJSON("https://address-book-lunchclub.herokuapp.com/contacts");
 ```
 
 Example response:
@@ -41,10 +40,10 @@ Example response:
   contacts: [
     {
       id: 1,
-      first: 'Ryan',
-      last: 'Florence'
-    }
-  ]
+      first: "Ryan",
+      last: "Florence",
+    },
+  ];
 }
 ```
 
@@ -55,10 +54,10 @@ Creates a new contact.
 Example Request:
 
 ```js
-$.post('http://salty-atoll-4248.herokuapp.com/contacts', {
-  first: 'Stanley',
-  last: 'Stuart'
-})
+$.post("https://address-book-lunchclub.herokuapp.com/contacts", {
+  first: "Stanley",
+  last: "Stuart",
+});
 ```
 
 Example response:
@@ -80,7 +79,7 @@ Returns the contact at id `:contactId`.
 Example Request:
 
 ```js
-$.getJSON('http://salty-atoll-4248.herokuapp.com/contacts/3')
+$.getJSON("https://address-book-lunchclub.herokuapp.com/contacts/3");
 ```
 
 Example response:
@@ -103,13 +102,13 @@ Example Request:
 
 ```js
 $.ajax({
-  url: 'http://salty-atoll-4248.herokuapp.com/contacts/3',
-  type: 'PUT',
+  url: "https://address-book-lunchclub.herokuapp.com/contacts/3",
+  type: "PUT",
   data: {
-    first: 'five',
-    last: 'tanley'
-  }
-})
+    first: "five",
+    last: "tanley",
+  },
+});
 ```
 
 Example response:
@@ -133,20 +132,17 @@ Example Request:
 
 ```js
 $.ajax({
-  url: 'http://salty-atoll-4248.herokuapp.com/contacts/3',
-  type: 'DELETE'
-})
+  url: "https://address-book-lunchclub.herokuapp.com/contacts/3",
+  type: "DELETE",
+});
 ```
 
 Example response:
 
 No content.
 
-
-License & Copyright
--------------------
+## License & Copyright
 
 MIT-Style license.
 
 Copyright &copy; 2013 Ryan Florence
-

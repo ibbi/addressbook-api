@@ -1,20 +1,23 @@
-var contact = require('../models/contact');
+var contact = require("../models/contact");
 
-exports.create = function(req, res) {
+exports.create = function (req, res) {
   var contacts = contact(token(req));
-  res.json({
-    contact: contacts.create(req.body.contact)
-  }, 201);
+  res.json(
+    {
+      contact: contacts.create(req.body.contact),
+    },
+    201
+  );
 };
 
-exports.list = function(req, res){
+exports.list = function (req, res) {
   var contacts = contact(token(req));
   res.json({
-    contacts: contacts.list()
+    contacts: contacts.list(),
   });
 };
 
-exports.read = function(req, res) {
+exports.read = function (req, res) {
   var contacts = contact(token(req));
   var record = contacts.read(req.params.contactId);
   if (!record) {
@@ -24,18 +27,18 @@ exports.read = function(req, res) {
   }
 };
 
-exports.update = function(req, res) {
+exports.update = function (req, res) {
   var contacts = contact(token(req));
   var record = contacts.update(req.params.contactId, req.body.contact);
   res.json({
-    contact: record
+    contact: record,
   });
 };
 
-exports.destroy = function(req, res) {
+exports.destroy = function (req, res) {
   var contacts = contact(token(req));
-  if (req.params.contactId === 'jack') {
-    res.send(500, 'You cannot destroy Jack Bauer');
+  if (req.params.contactId === "scott") {
+    res.send(500, "You cannot destroy Scott Wu");
   } else {
     contacts.destroy(req.params.contactId);
     res.send();
@@ -43,6 +46,5 @@ exports.destroy = function(req, res) {
 };
 
 function token(req) {
-  return req.header('authorization') || 'public';
+  return req.header("Authorization") || "public";
 }
-
