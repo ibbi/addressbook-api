@@ -30,6 +30,7 @@ exports.read = function (req, res) {
 exports.update = function (req, res) {
   var contacts = contact(token(req));
   var record = contacts.update(req.params.contactId, req.body.contact);
+  console.log(req);
   res.json({
     contact: record,
   });
