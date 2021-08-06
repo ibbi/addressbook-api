@@ -1,6 +1,7 @@
 var contact = require("../models/contact");
 
 exports.create = function (req, res) {
+  console.log(req.body);
   var contacts = contact(token(req));
   res.json(
     {
@@ -28,9 +29,9 @@ exports.read = function (req, res) {
 };
 
 exports.update = function (req, res) {
+  console.log(req.body);
   var contacts = contact(token(req));
   var record = contacts.update(req.params.contactId, req.body.contact);
-  console.log(req);
   res.json({
     contact: record,
   });
