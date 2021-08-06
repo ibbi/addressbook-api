@@ -37,6 +37,7 @@ module.exports = function (token) {
 
   exports.create({
     id: "scott",
+    number: "233-433-2121",
     first: "Scott",
     last: "Wu",
     avatar:
@@ -45,6 +46,7 @@ module.exports = function (token) {
 
   exports.create({
     id: "ryan",
+    number: "123-433-2221",
     first: "Ryan",
     last: "Florence",
     avatar: "http://ryanflorence.com/jsconf-avatars/avatars/ryan.jpg",
@@ -52,6 +54,7 @@ module.exports = function (token) {
 
   exports.create({
     id: "mj",
+    number: "783-433-9891",
     first: "Michael",
     last: "Jackson",
     avatar:
@@ -60,6 +63,7 @@ module.exports = function (token) {
 
   exports.create({
     id: "jeremy",
+    number: "303-433-3420",
     first: "Jeremy",
     last: "Ashkenas",
     avatar: "http://ryanflorence.com/jsconf-avatars/avatars/jeremy.jpg",
