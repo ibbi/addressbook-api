@@ -42,6 +42,7 @@ module.exports = function (token) {
     last: "Wu",
     avatar:
       "https://pbs.twimg.com/profile_images/1366774613796093962/xkPzptQv_400x400.jpg",
+    notes: "CTO at Lunchclub",
   });
 
   exports.create({
@@ -50,6 +51,7 @@ module.exports = function (token) {
     first: "Ryan",
     last: "Florence",
     avatar: "http://ryanflorence.com/jsconf-avatars/avatars/ryan.jpg",
+    notes: "Really likes peanut butter and tuna milkshakes",
   });
 
   exports.create({
@@ -59,6 +61,7 @@ module.exports = function (token) {
     last: "Jackson",
     avatar:
       "https://pbs.twimg.com/profile_images/3290627244/4e88243b7d2bf43553fce25499feec81.png",
+    notes: "Absolutely despises manicures",
   });
 
   exports.create({
@@ -67,6 +70,7 @@ module.exports = function (token) {
     first: "Jeremy",
     last: "Ashkenas",
     avatar: "http://ryanflorence.com/jsconf-avatars/avatars/jeremy.jpg",
+    notes: "Only writes FORTRAN and Sumerian",
   });
 
   return exports;
